@@ -1,0 +1,491 @@
+ <!DOCTYPE html>
+<!-- 
+    File: homework1-1.html
+    Name: Yasmin Mousa  
+    Date Created: 2024-09-04
+    Date Updated: 2024-09-21
+    Version: 1.0
+    Purpose: MIS 3371 Homework 1 HTML Form
+-->
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="mystyle.css"> <!-- link to css file -->
+      
+       <!-- displays text in the browser's tab -->
+        <title>New Account Registration | Juicy Couture Official</title>
+    </head>
+    <body>
+        <header>
+            <table width="100%">
+            <tr>
+                <td valign="top" align="left" width="20%"> 
+                    <div class="image">
+                        <img align="center" src="juicycouturelogo.png" alt="Juicy Couture Logo" width="170px" id="logo"/>
+                    </div>
+                </td>
+
+                <td>
+                    <h1>JUICY COUTURE</h1>
+
+                    <p><h4>Viva La Juicy! Sign up now to join the glamorous world of Juicy!</h4></p>
+                </td>
+
+                <td valign="bottom" align="right" width="20%">
+                    <p>Today's Date: <span id="today">Date goes here</span></p>
+                </td>
+
+            </tr>
+            </table>
+        </header>
+
+<hr>
+<!--form starts here-->
+<form action="thankyou.html">
+    <center>
+        <div class="format">
+            <table>
+                <tr>
+                    <th colspan="4">Create Account Profile</th>
+                </tr>
+                <!--creation of account profile begins here-->
+                <tr>
+                    <td class="td1"><label for="fname">First Name:</label>
+                    <td align="center">
+                        <input 
+                        type="text" 
+                        name="fname" 
+                        id="fname" 
+                        size="30" 
+                        required 
+                        title="Please enter your first name"
+                        />
+                    <label for="mname">Middle Initial:</label>
+                        <input 
+                        type="text" 
+                        name="mname" 
+                        id="mname" 
+                        size="1" 
+                        required 
+                        title="Please enter your middle initial"
+                        />
+                    </td>
+                    </td>
+                </tr>
+                <tr>
+                     <td class="td1"><label for="lname">Last Name:</label></td>
+                    <td>
+                        <input 
+                        type="text" 
+                        name="lname" 
+                        id="lname" 
+                        size="30" 
+                        required 
+                        title="Please enter your last name"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1"><label for="birth">Date of Birth:</label></td>
+                    <td>
+                        <input 
+                        type="date" 
+                        name="birth" 
+                        id="birth" 
+                        required 
+                        title="Please enter your birth date"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td1"><label for="gen">Gender:</label></td>
+                    <td>
+                        <input 
+                        type="radio" 
+                        name="gen" 
+                        id="gen1" 
+                        value="Female" 
+                        />
+                        Female
+
+                        <input 
+                        type="radio" 
+                        name="gen" 
+                        id="gen2" 
+                        value="Male" 
+                        />
+                        Male
+
+                        <input 
+                        type="radio" 
+                        name="gen" 
+                        id="gen3" 
+                        value="Other" 
+                        />
+                        Other
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1"><label for="ssn">SSN:</label></td>
+                    <td>
+                        <input 
+                        type="password" 
+                        minlength="10"
+                        maxlength="10"
+                        name="ssn" 
+                        id="ssn" 
+                        required 
+                        title="Please enter your social security number"
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="4"><hr></th> <!--divider line-->
+                </tr>
+
+                <!--section to make account sign in details-->
+                <tr>
+                    <th colspan="4">Account Sign In Details</th>
+                </tr>                
+
+                <tr>
+                    <td class="td1"><label for="uid">User ID:</label></td>
+                    <td>
+                        <input 
+                        type="text" 
+                        name="uid" 
+                        id="uid" 
+                        size="20" 
+                        required
+                        title="Please create a user id" 
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1"><label for="email">Email:</label></td>
+                    <td>
+                        <input 
+                        type="text" 
+                        name="email" 
+                        id="email"
+                        size="30"
+                        required 
+                        title="Please enter your email address"
+                        placeholder="name@domain.tld"
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1"><label for="pwd">Password:</label></td>
+                    <td>
+                        <input 
+                        type="password" 
+                        name="pwd" 
+                        id="pwd" 
+                        minlength="10"
+                        maxlength="30" 
+                        required 
+                        title="Please create a password"
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1"><label for="cpwd">Confirm Password:</label></td>
+                    <td>
+                        <input 
+                        type="password" 
+                        name="cpwd" 
+                        id="cpwd" 
+                        minlength="10"
+                        maxlength="30"
+                        required 
+                        title="Please confirm your password"
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="4"><hr></th> <!--divider line-->
+                </tr>
+
+                <tr>
+                    <th colspan="4">Contact Information</th>
+                </tr>                
+                <!--section for user's contact information-->
+                <tr>
+                    <td class="td1"><label for="addr1">Address 1:</label></td>
+                    <td>
+                        <input 
+                        type="text" 
+                        name="addr1" 
+                        id="addr1" 
+                        maxlength="30"
+                        required 
+                        title="Please enter your address"
+                        oninvalid="this.setCustomValidity('At least 1 address line Required')"
+                        oninput="this.setCustomValidity('')"
+                        placeholder="1234 Main St (req'd)"
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1"><label for="addr2">Address 2:</label></td>
+                    <td>
+                        <input 
+                        type="text" 
+                        name="addr2" 
+                        id="addr2" 
+                        maxlength="30"
+                        title="Please enter your address"
+                        placeholder="Apt #, etc..."                       
+                       />
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td class="td1"><label for="city">City:</label></td>
+                    <td>
+                        <input 
+                        type="text" 
+                        name="city" 
+                        id="city" 
+                        size="30"
+                        required
+                        title="Please enter the city"                     
+                       />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1"><label for="state">State:</label></td>
+                    <td>
+                        <select>
+                            <option selected disabled>Please Select One</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1"><label for="zip">Zip Code:</label></td>
+                    <td>
+                        <input 
+                        type="text" 
+                        name="zip" 
+                        id="zip" 
+                        pattern="[0-9]{5}"
+                        maxlength="5"
+                        required
+                        title="Please enter your zip code"                     
+                       />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1"><label for="phone">Phone Number:</label></td>
+                    <td>
+                        <input 
+                        type="text" 
+                        name="phone" 
+                        id="phone" 
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        maxlength="12"
+                        title="Please enter your phone number"    
+                        placeholder="222-222-2222"                 
+                       />
+                    </td>
+                </tr>
+
+               <tr>
+                    <td class="td1"><label for="alerts">Would you like to receive<br> email updates on the latest <br>news and exclusive deals?</label></td>
+                    <td>
+                        <input 
+                        type="radio" 
+                        name="alerts" 
+                        id="alert1" 
+                        value="Yes" 
+                        />
+                        Yes
+
+                        <input 
+                        type="radio" 
+                        name="alerts" 
+                        id="alert2" 
+                        value="No" 
+                        />
+                        No
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="4"><hr></th> <!--divider line-->
+                </tr>
+
+                <!--section getting to know user's story and preferences-->
+                <tr>
+                    <th colspan="4">Get To Know You!</th>
+                </tr> 
+
+                <!-- range slider -->
+                <tr>
+                    <td class="td1"><label for="range">How familiar are you with <br>the Juicy Couture brand?<br> (Rate from 1 to 10)</label></td>
+                    <td>
+                        <input
+                        type="range"
+                        name="range"
+                        id="range"
+                        min="1"
+                        max="10"
+                        value="0"
+                        />
+                        <span id="range-slider"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1"><label for="exp">How did you hear about us?</label></td>
+                    <td>
+                        <input 
+                        type="radio" 
+                        name="exp" 
+                        id="exp1" 
+                        value="Social Media" 
+                        />
+                        Social Media
+
+                        <input 
+                        type="radio" 
+                        name="exp" 
+                        id="exp2" 
+                        value="Advertisements" 
+                        />
+                        Advertisements
+
+                        <input 
+                        type="radio" 
+                        name="exp" 
+                        id="exp3" 
+                        value="Other" 
+                        />
+                        Other
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td class="td1" align="right">
+                        <label for="notes">If you selected "Other",<br> please explain:</label>
+                    </td>
+                    <td>
+                        <textarea
+                        rows="3"
+                        cols="50"
+                        maxlength="500"
+                        id="notes"
+                        name="notes"
+                        title="Please enter a brief explanation"
+                        placeholder="(Insert text here...)"              
+                        ></textarea>
+                        <span id="description_text"></span>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td class="td1"><label for="user_inp">What's your style?</label></td>
+                    <td>
+                        <input type="checkbox" id="optional" value="Bold"/>
+                        <label for="Bold">Bold</label>
+                        <input type="checkbox" id="optional" value="y2k"/>
+                        <label for="y2k">y2k</label>
+                        <input type="checkbox" id="optional" value="Chic"/>
+                        <label for="Chic">Chic</label>
+                        <input type="checkbox" id="optional" value="Patterned"/>
+                        <label for="Patterned">Patterned</label><br>
+
+                        <input type="checkbox" id="optional" value="Comfortable"/>
+                        <label for="Comfortable">Comfortable</label>
+                        <input type="checkbox" id="optional" value="Athleisure"/>
+                        <label for="Athleisure">Athleisure</label>
+                        <input type="checkbox" id="optional" value="Bohemian"/>
+                        <label for="Bohemian">Bohemian</label><br>
+                        &nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td1" colspan="4">
+                    <center>
+                        <input type="submit" name="submit" id="submit" style="font-family: 'optima', sans-serif;">
+                        &nbsp;
+                        <input type="reset" name="reset" id="reset" style="font-family: 'optima', sans-serif;">
+                    <center>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </center>
+</form>
+<!--footer which contains website link starts here-->
+<footer>
+    <p id="footer"></p> &#169 2024 Juicy Couture | <a href="https://juicycouture.com/pages/contact-us" target="_blank" rel="noopener noreferrer">Contact Us</a></p>
+</footer>
+
+<script src="hw1.js"></script>
+    </body>
+</html>
