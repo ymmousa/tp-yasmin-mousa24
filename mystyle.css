@@ -1,0 +1,138 @@
+/*
+    File: mystyle.css
+    Name: Yasmin Mousa  
+    Date Created: 2024-09-04
+    Date Updated: 2024-09-21
+    Version: 1.0
+    Purpose: MIS 3371 Homework 1 CSS File
+*/
+header {
+  width: 100%;
+ background-color: rgba(242, 8, 141, 0.501);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(247, 5, 142, 0.273);
+  margin: 0;
+  height: 100%;
+  min-height: 100vh;
+}
+
+form {
+    flex-grow: 1;
+}
+
+h1 {
+  text-align: center;
+  color: rgba(11, 4, 0, 0.951);
+  margin-left: 20px;
+  font-family: garamond;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+h2 {
+  text-align: center;
+  color: rgba(11, 4, 0, 0.951);
+  margin-left: 5px;
+  font-family: merriweather;
+  font-weight: bold;
+  flex-grow: 1;
+}
+ 
+ h4 {
+  text-align: center;
+  color: rgba(11, 4, 0, 0.951);
+  margin-left: 5px;
+  font-family: merriweather;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+main {
+  text-align: center;
+  color: rgba(11, 4, 0, 0.951);
+  margin-left: 5px;
+  font-family: merriweather;
+  font-weight: normal;
+  flex-grow: 1;
+}
+
+.image {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.td1 {
+  text-align: right;
+  color: rgba(11, 4, 0, 0.951);
+  font-family: merriweather;
+  font-weight: normal;
+  padding-right: 10px;
+
+}
+
+td {
+  padding: 5px;
+        
+}
+th {
+  text-align: center;
+  color: rgba(11, 4, 0, 0.951);
+  font-family: merriweather;
+  font-weight: bold;
+
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(242, 8, 141, 0.501);
+  height: 2.5 rem;
+}
+
+#footer {
+  text-align: left;
+  color: rgba(11, 4, 0, 0.951);
+  font-family: merriweather; 
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+label {
+  text-align: right;
+  color: rgba(11, 4, 0, 0.951);
+  font-family: merriweather; 
+  font-weight: normal;
+}
+
+input {
+  text-align: left;
+  color: rgba(11, 4, 0, 0.951);
+  font-family: merriweather; 
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+textarea {
+  text-align: left;
+  color: rgba(11, 4, 0, 0.951);
+  font-family: merriweather; 
+  font-weight: normal;
+}
+
+#today {
+   text-align: left;
+  color: rgba(11, 4, 0, 0.951);
+  font-family: merriweather; 
+  font-weight: normal;
+}
+
