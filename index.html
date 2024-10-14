@@ -58,6 +58,8 @@
                         id="fname" 
                         maxlength="30"
                         size="30" 
+                        title="Letters, apostrophes, and dashes only"
+                        pattern="[a-zA-Z2-5']"
                         required 
                         title="Please enter your first name"
                         />
@@ -67,7 +69,8 @@
                         name="mname" 
                         id="mname" 
                         maxlength="1"
-                        size="1" 
+                        size="1"
+                        title="Letters only, no numbers, and blank/null ok"
                         required 
                         title="Please enter your middle initial"
                         />
@@ -83,6 +86,8 @@
                         id="lname"
                         maxlength="30"
                         size="30" 
+                        title="Letters, apostrophes, numbers 2-5 and dashes only"
+                        pattern="[a-zA-Z2-5']"
                         required 
                         title="Please enter your last name"
                         />
@@ -95,9 +100,12 @@
                         type="date" 
                         name="birth" 
                         id="birth" 
+                        onblur="validateDob()"
                         required 
                         title="Please enter your birth date"
                         />
+                     <br />
+                     <span class="error" id="dob-error"></span>
                     </td>
                 </tr>
                 <tr>
@@ -175,6 +183,7 @@
                         name="email" 
                         id="email"
                         size="30"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
                         required 
                         title="Please enter your email address"
                         placeholder="name@domain.tld"
@@ -350,8 +359,11 @@
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         maxlength="12"
                         title="Please enter your phone number"    
-                        placeholder="222-222-2222"                 
+                        placeholder="222-222-2222"   
+                        onblur="validatePhone()"
                        />
+                     <br />
+                     <span class="error" id="phone-error"></span>
                     </td>
                 </tr>
 
