@@ -58,8 +58,65 @@ function validateSSN() {
     }
 }
 
+// UserID //
+function validateUserID() {
+    uid = = document.getElementById("uid").value;
+    
+    // Convert UserID to lowercase //
+    uid = uid.toLowerCase();
+
+    // Redisplay UserID in lowercase //
+    document.getElementById("uid").value = uid;
+
+    if (uid.length === 0) {
+    document.getElementById("uid-error").innerHTML = "UserID can not be empty";
+    return false;
+    }
+
+// Check that UserID does not start with number //
+    if (!isNaN(uid.charAt(0))) {
+    document.getElementById("uid-error").innerHTML = "UserID can not start with a number";
+    return false;
+    }
+
+    // Check that UserID only contains letters, numbers, or underscores //
+    let regex = /^[a-zA-Z0-9_]+$/;
+    if (!regex.test(uid)) {
+    document.getElementById("uid-error").innerHTML = "UserID can only contain letters, numbers, or underscores";
+    return false;
+    } else if (uid.length < 5) {
+    document.getElementById("uid-error").innerHTML = "UserID must be at least 5 characters";
+    return false;
+    } else if (uid.length > 30) {
+    document.getElementById("uid-error").innerHTML = "UserID must not exceed 30 characters";
+    return false;
+    } else {
+        // If all requirements are satisfied, UserID is valid //
+        document.getElementById("uid-error").innerHTML = "";
+        return true;
+    }
+}
+
+// Password //
+function
+        
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
 
 
 
