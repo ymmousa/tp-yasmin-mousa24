@@ -144,6 +144,33 @@ function validatePassword() {
     document.getElementById("msg5").innerHTML = "";
     }
 
+    // Check that password does not equal UserID //
+    if (pwd == uid || pwd.includes(uid)) {
+    document.getElementById("msg6").innerHTML = "Password cannot equal UserID";
+    errorFlag = 1;
+    } else {
+    document.getElementById("msg6").innerHTML = "";
+    }
+
+    //When there are no errors, display nothing // 
+    if (errorFlag === 0) {
+    document.getElementById("msg3").innerHTML = "Valid Password";
+    }
+}
+
+/// Confirm Password ///
+function confirmPassword() {
+    pwd = document.getElementById("pwd").value;
+    cpwd = document.getElementById("cpwd").value;
+
+    if (cpwd != pwd) {
+    document.getElementById("cpwd-error").innerHTML = "Password does not match";
+    return false;
+    } else {
+    document.getElementById("cpwd-error").innerHTML = "";
+    return true;
+    }
+}
 
 
 
