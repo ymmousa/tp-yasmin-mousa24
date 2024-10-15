@@ -98,8 +98,51 @@ function validateUserID() {
 }
 
 // Password //
-function
-        
+function validatePassword() {
+    const pwd = document.getElementById("pwd").value;
+    const uid = document.getElementById("uid").value;
+
+    let errorFlag = 0;
+    
+    // Check password for lowercase letters //
+    if (!pwd.match(/[a-z]/)) {
+    document.getElementById("msg1").innerHTML = "Enter at least 1 lowercase letter";
+    errorFlag = 1;
+    } else {
+    document.getElementById("msg1").innerHTML = "";
+    }
+
+    // Check for capital letters //
+    if (!pwd.match(/[A-Z]/)) {
+    document.getElementById("msg2").innerHTML = "Enter at least 1 capital letter";
+    errorFlag = 1;
+    } else {
+    document.getElementById("msg2").innerHTML = "";
+    }
+
+    // Check for numbers //
+    if (!pwd.match(/[0-9]/)) {
+    document.getElementById("msg3").innerHTML = "Enter at least 1 number";
+    errorFlag = 1;
+    } else {
+    document.getElementById("msg3").innerHTML = "";
+    }
+
+    // Check for special characters //
+    if (!pwd.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
+    document.getElementById("msg4").innerHTML = "Enter at least 1 special character";
+    errorFlag = 1;
+    } else {
+    document.getElementById("msg4").innerHTML = "";
+    }
+
+    // Check for length //
+    if (pwd.length <8) {
+    document.getElementById("msg5").innerHTML = "Enter a minimum of 8 characters";
+    errorFlag = 1;
+    } else {
+    document.getElementById("msg5").innerHTML = "";
+    }
 
 
 
