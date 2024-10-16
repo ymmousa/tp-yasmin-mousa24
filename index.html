@@ -60,6 +60,8 @@
                         size="30" 
                         title="Letters, apostrophes, and dashes only"
                         pattern="[A-Z^a-z \-']{2,}]"
+                        onblur="validatefname()"
+                        oninput="this.setCustomValidity('')"
                         required 
                         title="Please enter your first name"
                         />
