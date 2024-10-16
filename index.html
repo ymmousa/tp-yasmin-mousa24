@@ -90,6 +90,8 @@
                         size="30" 
                         title="Letters, apostrophes, numbers 2-5 and dashes only"
                         pattern="[a-zA-Z2-5']"
+                        onblur="validatelname()"
+                        oninput="this.setCustomValidity('')"
                         required 
                         title="Please enter your last name"
                         />
