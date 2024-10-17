@@ -19,27 +19,7 @@ let slider = document.getElementById("range")
 
     slider.oninput = function () {output.innerHTML = this.value;};
 
-// DOB //
-function validateDob() {
-    birth = document.getElementById("birth");
-    let date = new Date(birth.value);
-    let maxDate = new Date().setFullYear(new Date().getFullYear() - 120);
 
-    if (date > new Date()) {
-        document.getElementById("birth-error").innerHTML =
-            "Date can not be in the future";
-        birth.value = "";
-        return false;
-    } else if (date < new Date(maxDate)) {
-        document.getElementById("birth-error").innerHTML =
-            "Date can not be more than 120 years ago";
-        birth.value = "";
-        return false;
-    } else {
-        document.getElementById("birth-error").innerHTML = "";
-        return true;
-    }
-}
 
 // SSN //
 function validateSSN() {
