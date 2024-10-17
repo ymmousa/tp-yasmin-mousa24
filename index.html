@@ -59,12 +59,12 @@
                         maxlength="30"
                         size="30" 
                         title="Letters, apostrophes, and dashes only"
-                        pattern="[A-Z^a-z \-']{2,}]"
-                        onblur="validatefname()"
+                        pattern="[A-Z^a-z \-']{2,30}"
+                        onblur="validateFname()"
                         oninput="this.setCustomValidity('')"
                         required 
-                        title="Please enter your first name"
                         />
+                     <span class="error" id="fname-error"></span>
                     <label for="mname">Middle Initial:</label>
                         <input 
                         type="text" 
@@ -73,9 +73,11 @@
                         maxlength="1"
                         size="1"
                         title="Letters only, no numbers, and blank/null ok"
-                        required 
-                        title="Please enter your middle initial"
+                        pattern="[a-zA-Z]{0,1}"
+                        onblur="validateMname()"
+                        required
                         />
+                      <span class="error" id="mname-error"></span>
                     </td>
                     </td>
                 </tr>
@@ -90,11 +92,10 @@
                         size="30" 
                         title="Letters, apostrophes, numbers 2-5 and dashes only"
                         pattern="[a-zA-Z 2-5]{2,}"
-                        onblur="validatelname()"
-                        oninput="this.setCustomValidity('')"
-                        required 
-                        title="Please enter your last name"
+                        onblur="validateLname()"
+                        required
                         />
+                      <span class="error" id="lname-error"></span>
                     </td>
                 </tr>
                 <tr>
@@ -150,9 +151,11 @@
                         maxlength="10"
                         name="ssn" 
                         id="ssn" 
+                        onblur="validateSsn()"
                         required 
-                        title="Please enter your social security number"
-                        />
+                        title="Numbers only"
+                         /> 
+                 <span class="error" id="ssn-error"></span>
                     </td>
                 </tr>
 
@@ -176,7 +179,8 @@
                         maxlength="20"
                         onblur="validateUserId()"
                         required
-                        title="Please create a user id" 
+                        title="Userid must contain at most 20 characters. Cannot start with a number."
+                        
                         />
                     <!--    <span class="error" id="uid-error"></span> -->
                     </td>
@@ -194,7 +198,10 @@
                         required 
                         title="Please enter your email address"
                         placeholder="name@domain.tld"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9._]+\.[a-z]{2,20}$"|
+                        onblur="validateEmail()"
                         />
+                     <span class="error" id="email-error"></span>
                     </td>
                 </tr>
 
@@ -208,8 +215,12 @@
                         minlength="10"
                         maxlength="30" 
                         required 
-                        title="Please create a password"
+                        title="Password must contain at least 10 characters, one uppercase letter, one lowercase letter, one number, and one special character."
+                        onblur="validatePwd()"
+                        oninput="validatePwd()"
+                        onfocus="validatePwd()"
                         />
+                      <span class="error" id="pwd-error"></span>
                     </td>
                 </tr>
 
@@ -224,7 +235,11 @@
                         maxlength="30"
                         required 
                         title="Please confirm your password"
+                        onblur="confirmCpwd()"
+                        oninput="confirmCpwd()"
+                        onfocus="confirmCpwd()"
                         />
+                      <span class="error" id="cpwd-error"></span>
                     </td>
                 </tr>
 
@@ -247,9 +262,10 @@
                         required 
                         title="Please enter your address"
                         oninvalid="this.setCustomValidity('At least 1 address line Required')"
-                        oninput="this.setCustomValidity('')"
+                        onblur="validateAddress1()"
                         placeholder="1234 Main St (req'd)"
                         />
+                     <span class="error" id="addr1-error"></span>
                     </td>
                 </tr>
 
@@ -351,8 +367,10 @@
                         pattern="[0-9]{5}"
                         maxlength="5"
                         required
-                        title="Please enter your zip code"                     
+                        title="Numbers only"
+                        pattern="[0-9]{5}"
                        />
+                      <span class="error" id="zip-error"></span>
                     </td>
                 </tr>
 
@@ -369,7 +387,7 @@
                         placeholder="222-222-2222"   
                         onblur="validatePhone()"
                        />
-                     <br />
+                     </br>
                 <!--     <span class="error" id="phone-error"></span> -->
                     </td>
                 </tr>
