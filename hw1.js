@@ -18,7 +18,7 @@ let slider = document.getElementById("range")
     output.innerHTML = slider.value;
 
     slider.oninput = function () {output.innerHTML = this.value;};
-
+/*
 // DOB //
 function validateDob() {
     birth = document.getElementById("birth");
@@ -171,7 +171,7 @@ function confirmPassword() {
     return true;
     }
 }
-
+*/
 
 
 
