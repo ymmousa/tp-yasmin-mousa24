@@ -98,6 +98,12 @@ function validateUserID() {
     }
 }
 
+// Email validation //
+function validateEmail() {
+    email = document.getElementById("email").value;
+    var emailR = /^
+
+
 // Password //
 function validatePassword() {
     const pwd = document.getElementById("pwd").value;
@@ -187,6 +193,25 @@ function validateAddress1() {
         return true;
     }
 }
+
+
+// Zipcode validation code // 
+function validateZip() {
+    const zipInput = document.getElementById("zip");
+    let zip = zipInput.value.replace(/[^\d-]/g,"") // removes non-number and non-dash characters
+
+    if (!zip) {
+        document.getElementId("zip-error").innerHTML = "Zip code cannot be left blank.";
+        return false;
+    } 
+    if (zip.length > 5) {
+        zip = zip.slice(0,5); //removes all digits after first 5
+    }
+        zipInput.value = zip;
+        document.getElementId("zip-error").innerHTML = "";
+    return true;
+}
+
 
 
 
