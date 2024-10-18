@@ -8,11 +8,9 @@
 */
 
 //this is the dynamic date js code//
-document.addEventListener('DOMContentLoaded', (event) => {
 const d = new Date();
 let text = d.toLocaleDateString();
 document.getElementById("today").innerHTML = text;
-});
 
 //this is the range slider js code//
 let slider = document.getElementById("range")
