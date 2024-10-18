@@ -61,7 +61,6 @@
                         title="Letters, apostrophes, and dashes only"
                         pattern="[A-Z^a-z \-']{2,30}"
                         onblur="validateFname()"
-                        oninput="this.setCustomValidity('')"
                         required 
                         />
                      <span class="error" id="fname-error"></span>
@@ -387,7 +386,7 @@
                         placeholder="222-222-2222"   
                         onblur="validatePhone()"
                        />
-                     </br>
+                     <br/>
                 <!--     <span class="error" id="phone-error"></span> -->
                     </td>
                 </tr>
@@ -520,6 +519,19 @@
 
             </table>
         </div>
+     <div class="pword-message">
+      <span id="msg1"></span> <br/>
+      <span id="msg2"></span> <br/>
+      <span id="msg3"></span> <br/>
+      <span id="msg4"></span> <br/>
+      <span id="msg5"></span> <br/>
+      <span id="msg6"></span> <br/>
+      <span id="msg7"></span> <br/>
+      <span id="cpword-error"></span> <br/>
+     </div>
+     <center>
+      <p id="showInput"></p>
+     </center>
     </center>
 </form>
 <!--footer which contains website link starts here-->
