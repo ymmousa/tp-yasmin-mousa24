@@ -210,7 +210,7 @@ function validateAddress1() {
 // Zipcode validation code // 
 function validateZip() {
     const zipInput = document.getElementById("zip");
-    let zip = zipInput.value.replace(/[^\d-]/g,"") // removes non-number and non-dash characters
+    let zip = zipInput.value.replace(/[^\d-]/g,""); // removes non-number and non-dash characters
 
     if (!zip) {
         document.getElementId("zip-error").innerHTML = "Zip code cannot be left blank.";
@@ -223,6 +223,24 @@ function validateZip() {
         document.getElementId("zip-error").innerHTML = "";
     return true;
 }
+
+// Phone validation //
+function validatePhone() {
+    const phoneInput = document.getElementById("phone");
+    const phone = phoneInput.value.replace(/[^\d-]/g,""); //
+
+    if (phone.length !== 10) {
+        document.getElementId("phone-error").innerHTML = "Phone number cannot be left blank.";
+        return false;
+    }
+
+    const formattedPhone = 
+    phone.slice(0,3) + "=" + phone.slice(3,6) + "=" + phone.slice(6)
+    phoneInput.value = formattedPhone;
+    document.getElementById("phone-error").innerHTML = "";
+    return true;
+}
+    
 
 
 
