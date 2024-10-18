@@ -24,7 +24,7 @@ let slider = document.getElementById("range")
 function validateDob() {
     birth = document.getElementById("birth");
     let date = new Date(birth.value);
-    let maxDate = new Date().setFullYear(new Date().getFullYear() - 120);
+    let maxDate = new Date().setFullYear(new Date().getFullYear()-120);
 
     if (date > new Date()) {
         document.getElementById("birth-error").innerHTML =
@@ -43,11 +43,11 @@ function validateDob() {
 }
 
 // SSN //
-function validateSSN() {
+function validateSsn() {
     const ssn = document.getElementById("ssn").value;
 
-// Expression that validates ssn//
-    const ssn = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
+// Regex expression that validates ssn//
+    const ssnR = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
 
     if(!ssnR.test(ssn)) {
     document.getElementById("ssn-error").innerHTML =
@@ -170,6 +170,21 @@ function confirmPassword() {
     } else {
     document.getElementById("cpwd-error").innerHTML = "";
     return true;
+    }
+}
+
+// Address 1 Validation //
+function validateAddress1() {
+    var addr1 = document.getElementById("addr1").value;
+    console.log(addr1);
+    console.log(addr1.length);
+
+    if (addr1.length <2) {
+        document.getElementId("addr1-error").innerHTML = "Please enter something on address line";
+        return false;
+    } else {
+        document.getElementId("addr1-error").innerHTML = "";
+        return true;
     }
 }
 
