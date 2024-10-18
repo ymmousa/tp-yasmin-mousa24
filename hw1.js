@@ -101,7 +101,19 @@ function validateUserID() {
 // Email validation //
 function validateEmail() {
     email = document.getElementById("email").value;
-    var emailR = /^
+    // var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //regex pattern for email
+
+    if (email =="") {
+        document.getElementById("email-error").innertHTML = "Email cannot be empty.";
+        return false;
+    } else if (!email.match(emailR)) {
+        document.getElementById("email-error").innertHTML = "Please enter a valid email address"
+        return false;
+    } else {
+         document.getElementById("email-error").innertHTML = "";
+         return true;
+    }
+}
 
 
 // Password //
