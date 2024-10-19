@@ -131,13 +131,13 @@ textarea {
 
 #today {
    text-align: left;
-  color: rgba(11, 4, 0, 0.951);
+  color: rgba(11, 4, 0);
   font-family: merriweather; 
   font-weight: normal;
 }
 
 .error {
-    color: rgba(red);
+    color: rgba(255, 0, 0);
     font-size: 12px;
     font-family: merriweather;
      font-weight: normal;
@@ -153,8 +153,7 @@ textarea {
     padding: 10px;
     border-spacing: 2px;
     border-radius: 20px;
-    color: rgba(red);
-    
+    color: rgba(255, 0, 0);
 }
 
 #review {
@@ -168,7 +167,7 @@ td.output {
     padding: 10px;
     border-spacing: 2px;
     border-radius: 20px;
-    color: rgba(black);
+    color: rgba(0, 0, 0);
 }
 
 td.output {
