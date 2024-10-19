@@ -184,10 +184,10 @@ function validateAddress1() {
     console.log(addr1.length);
 
     if (addr1.length <2) {
-        document.getElementId("addr1-error").innerHTML = "Please enter something on address line";
+        document.getElementById("addr1-error").innerHTML = "Please enter something on address line";
         return false;
     } else {
-        document.getElementId("addr1-error").innerHTML = "";
+        document.getElementById("addr1-error").innerHTML = "";
         return true;
     }
 }
@@ -199,14 +199,14 @@ function validateZip() {
     let zip = zipInput.value.replace(/[^\d-]/g,""); // removes non-number and non-dash characters
 
     if (!zip) {
-        document.getElementId("zip-error").innerHTML = "Zip code cannot be left blank.";
+        document.getElementById("zip-error").innerHTML = "Zip code cannot be left blank.";
         return false;
     } 
     if (zip.length > 5) {
         zip = zip.slice(0,5); //removes all digits after first 5
     }
         zipInput.value = zip;
-        document.getElementId("zip-error").innerHTML = "";
+        document.getElementById("zip-error").innerHTML = "";
     return true;
 }
 
@@ -216,7 +216,7 @@ function validatePhone() {
     const phone = phoneInput.value.replace(/[^\d-]/g,""); //
 
     if (phone.length == 0) {
-        document.getElementId("phone-error").innerHTML = "Phone number cannot be left blank.";
+        document.getElementById("phone-error").innerHTML = "Phone number cannot be left blank.";
         return false;
     }
 
