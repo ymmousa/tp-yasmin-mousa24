@@ -118,77 +118,61 @@ function validateEmail() {
 }
 
 
-// Password //
+// Password validation //
 function validatePassword() {
     const pwd = document.getElementById("pwd").value;
     const uid = document.getElementById("uid").value;
-
-    let errorFlag = 0;
+    
+// sets up and initializes array //
+    const errorMessage = [];
     
     // Check password for lowercase letters //
     if (!pwd.match(/[a-z]/)) {
-    document.getElementById("msg1").innerHTML = "Enter at least 1 lowercase letter";
-    errorFlag = 1;
-    } else {
-    document.getElementById("msg1").innerHTML = "";
+    errorMessage.push("Enter at least 1 lowercase letter");
     }
 
-    // Check for capital letters //
+    // Check for uppercase letters //
     if (!pwd.match(/[A-Z]/)) {
-    document.getElementById("msg2").innerHTML = "Enter at least 1 capital letter";
-    errorFlag = 1;
-    } else {
-    document.getElementById("msg2").innerHTML = "";
+    errorMessage.push("Enter at least 1 uppercase letter");
     }
 
     // Check for numbers //
     if (!pwd.match(/[0-9]/)) {
-    document.getElementById("msg3").innerHTML = "Enter at least 1 number";
-    errorFlag = 1;
-    } else {
-    document.getElementById("msg3").innerHTML = "";
+    errorMessage.push("Enter at least 1 number");
     }
 
     // Check for special characters //
     if (!pwd.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
-    document.getElementById("msg4").innerHTML = "Enter at least 1 special character";
-    errorFlag = 1;
-    } else {
-    document.getElementById("msg4").innerHTML = "";
+    errorMessage.push("Enter at least 1 special character");
     }
 
     // Check for length //
     if (pwd.length <8) {
-    document.getElementById("msg5").innerHTML = "Enter a minimum of 8 characters";
-    errorFlag = 1;
-    } else {
-    document.getElementById("msg5").innerHTML = "";
+    errorMessage.push("Enter a minimum of 8 characters");
     }
 
     // Check that password does not equal UserID //
     if (pwd == uid || pwd.includes(uid)) {
-    document.getElementById("msg6").innerHTML = "Password cannot equal UserID";
-    errorFlag = 1;
-    } else {
-    document.getElementById("msg6").innerHTML = "";
+    errorMessage.push("Password cannot equal UserID");
     }
 
     //When there are no errors, display nothing // 
-    if (errorFlag === 0) {
-    document.getElementById("msg3").innerHTML = "Valid Password";
+    const errorContainer = document.querySelector(".pwd-message");
+    errorContainer.innerHTML = errorMessage
+    .map((message) => '<span>{$message}</span><br/>')
+    .join("");
     }
-}
 
-/// Confirm Password ///
+/// Confirm Password validation ///
 function confirmPassword() {
-    pwd = document.getElementById("pwd").value;
-    cpwd = document.getElementById("cpwd").value;
+    pwd1 = document.getElementById("pwd").value;
+    pwd2 = document.getElementById("cpwd").value;
 
-    if (cpwd != pwd) {
-    document.getElementById("cpwd-error").innerHTML = "Password does not match";
+    if (pwd1 != pwd2) {
+    document.getElementById("pwd-error").innerHTML = "Password does not match";
     return false;
     } else {
-    document.getElementById("cpwd-error").innerHTML = "";
+    document.getElementById("pwd-error").innerHTML = "Passwords match";
     return true;
     }
 }
