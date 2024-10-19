@@ -148,8 +148,37 @@ textarea {
     font-family: merriweather;
     font-weight: normal;
     position: relative;
-
+    left: 100px;
+    background: transpaernt;
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+    color: rgba(red);
+    
 }
+
+#review {
+    margin-top: 5px;
+}
+table.output,
+tr.output,
+td.output {
+    width: 500px;
+    background-color: rgba();
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+    color: rgba(black);
+}
+
+td.output {
+    width: 500px;
+    background-color: rgba();
+    padding: 10px;
+    border-spacing: 2px;
+}
+    
+    
     
     
 
