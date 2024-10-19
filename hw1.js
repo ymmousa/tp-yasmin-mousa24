@@ -261,7 +261,17 @@ function reviewInput() {
                     
          }
      }
+    if (formoutput.length > 0) {
+        formoutput = formoutput + "</table>";
+        document.getElementById("showInput").innerHTML = formoutput;
+    }
 }
+
+// remove user input //
+function removeReview() {
+    document.getElementById("showInput").innerHTML = "";
+}
+
                         
 
 
