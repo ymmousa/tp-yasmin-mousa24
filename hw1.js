@@ -159,7 +159,7 @@ function validatePassword() {
     //When there are no errors, display nothing // 
     const errorContainer = document.querySelector(".pwd-message");
     errorContainer.innerHTML = errorMessage
-    .map((message) => '<span>{$message}</span><br/>')
+    .map((message) => '<span>${message}</span><br/>')
     .join("");
     }
 
@@ -215,13 +215,13 @@ function validatePhone() {
     const phoneInput = document.getElementById("phone");
     const phone = phoneInput.value.replace(/[^\d-]/g,""); //
 
-    if (phone.length !== 10) {
+    if (phone.length == 0) {
         document.getElementId("phone-error").innerHTML = "Phone number cannot be left blank.";
         return false;
     }
 
     const formattedPhone = 
-    phone.slice(0,3) + "=" + phone.slice(3,6) + "=" + phone.slice(6)
+    phone.slice(0,3) + "=" + phone.slice(3,6) + "=" + phone.slice(6,10)
     phoneInput.value = formattedPhone;
     document.getElementById("phone-error").innerHTML = "";
     return true;
