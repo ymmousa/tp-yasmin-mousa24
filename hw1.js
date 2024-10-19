@@ -62,8 +62,8 @@ function validateSsn() {
 }
 
 // UserID //
-function validateUserID() {
-    uid = = document.getElementById("uid").value;
+function validateUserId() {
+    uid = document.getElementById("uid").value;
     
     // Convert UserID to lowercase //
     uid = uid.toLowerCase();
@@ -71,7 +71,7 @@ function validateUserID() {
     // Redisplay UserID in lowercase //
     document.getElementById("uid").value = uid;
 
-    if (uid.length === 0) {
+    if (uid.length == 0) {
     document.getElementById("uid-error").innerHTML = "UserID can not be empty";
     return false;
     }
