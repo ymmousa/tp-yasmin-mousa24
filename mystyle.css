@@ -164,7 +164,7 @@ table.output,
 tr.output,
 td.output {
     width: 500px;
-    background-color: rgba();
+    background-color: rgba(246, 55, 242, 0.792);
     padding: 10px;
     border-spacing: 2px;
     border-radius: 20px;
@@ -173,12 +173,7 @@ td.output {
 
 td.output {
     width: 500px;
-    background-color: rgba();
+    background-color: rgba(246, 55, 242, 0.792);
     padding: 10px;
     border-spacing: 2px;
 }
-    
-    
-    
-    
-
