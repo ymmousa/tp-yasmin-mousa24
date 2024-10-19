@@ -30,12 +30,12 @@ function validateDob() {
 
     if (date > new Date()) {
         document.getElementById("birth-error").innerHTML =
-            "Date can not be in the future";
+            "Date can not be in the future.";
         birth.value = "";
         return false;
     } else if (date < new Date(maxDate)) {
         document.getElementById("birth-error").innerHTML =
-            "Date can not be more than 120 years ago";
+            "Date can not be more than 120 years ago.";
         birth.value = "";
         return false;
     } else {
@@ -53,7 +53,7 @@ function validateSsn() {
 
     if(!ssnR.test(ssn)) {
     document.getElementById("ssn-error").innerHTML =
-        "Please enter a valid Social Security Number (e.g 123-45-6789)";
+        "Please enter a valid Social Security Number. (e.g 123-45-6789)";
         return false;
     } else {
         document.getElementById("ssn-error").innerHTML = "";
@@ -72,26 +72,26 @@ function validateUserId() {
     document.getElementById("uid").value = uid;
 
     if (uid.length == 0) {
-    document.getElementById("uid-error").innerHTML = "UserID can not be empty";
+    document.getElementById("uid-error").innerHTML = "UserID can not be empty.";
     return false;
     }
 
 // Check that UserID does not start with number //
     if (!isNaN(uid.charAt(0))) {
-    document.getElementById("uid-error").innerHTML = "UserID can not start with a number";
+    document.getElementById("uid-error").innerHTML = "UserID can not start with a number.";
     return false;
     }
 
     // Check that UserID only contains letters, numbers, or underscores //
     let regex = /^[a-zA-Z0-9_]+$/;
     if (!regex.test(uid)) {
-    document.getElementById("uid-error").innerHTML = "UserID can only contain letters, numbers, or underscores";
+    document.getElementById("uid-error").innerHTML = "UserID can only contain letters, numbers, or underscores.";
     return false;
     } else if (uid.length < 5) {
-    document.getElementById("uid-error").innerHTML = "UserID must be at least 5 characters";
+    document.getElementById("uid-error").innerHTML = "UserID must be at least 5 characters.";
     return false;
     } else if (uid.length > 30) {
-    document.getElementById("uid-error").innerHTML = "UserID must not exceed 30 characters";
+    document.getElementById("uid-error").innerHTML = "UserID must not exceed 30 characters.";
     return false;
     } else {
         // If all requirements are satisfied, UserID is valid //
@@ -109,7 +109,7 @@ function validateEmail() {
         document.getElementById("email-error").innerHTML = "Email cannot be empty.";
         return false;
     } else if (!email.match(emailR)) {
-        document.getElementById("email-error").innerHTML = "Please enter a valid email address"
+        document.getElementById("email-error").innerHTML = "Please enter a valid email address."
         return false;
     } else {
          document.getElementById("email-error").innerHTML = "";
@@ -128,32 +128,32 @@ function validatePassword() {
     
     // Check password for lowercase letters //
     if (!pwd.match(/[a-z]/)) {
-    errorMessage.push("Enter at least 1 lowercase letter");
+    errorMessage.push("Enter at least 1 lowercase letter.");
     }
 
     // Check for uppercase letters //
     if (!pwd.match(/[A-Z]/)) {
-    errorMessage.push("Enter at least 1 uppercase letter");
+    errorMessage.push("Enter at least 1 uppercase letter.");
     }
 
     // Check for numbers //
     if (!pwd.match(/[0-9]/)) {
-    errorMessage.push("Enter at least 1 number");
+    errorMessage.push("Enter at least 1 number.");
     }
 
     // Check for special characters //
     if (!pwd.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
-    errorMessage.push("Enter at least 1 special character");
+    errorMessage.push("Enter at least 1 special character.");
     }
 
     // Check for length //
     if (pwd.length <8) {
-    errorMessage.push("Enter a minimum of 8 characters");
+    errorMessage.push("Enter a minimum of 8 characters.");
     }
 
     // Check that password does not equal UserID //
     if (pwd == uid || pwd.includes(uid)) {
-    errorMessage.push("Password cannot equal UserID");
+    errorMessage.push("Password cannot equal UserID.");
     }
 
     //When there are no errors, display nothing // 
@@ -169,10 +169,10 @@ function confirmPassword() {
     pwd2 = document.getElementById("cpwd").value;
 
     if (pwd1 != pwd2) {
-    document.getElementById("cpwd-error").innerHTML = "Password does not match";
+    document.getElementById("cpwd-error").innerHTML = "Password does not match.";
     return false;
     } else {
-    document.getElementById("cpwd-error").innerHTML = "Passwords match";
+    document.getElementById("cpwd-error").innerHTML = "Passwords match.";
     return true;
     }
 }
@@ -184,7 +184,7 @@ function validateAddress1() {
     console.log(addr1.length);
 
     if (addr1.length <2) {
-        document.getElementById("addr1-error").innerHTML = "Please enter something on address line";
+        document.getElementById("addr1-error").innerHTML = "Please enter address on address line.";
         return false;
     } else {
         document.getElementById("addr1-error").innerHTML = "";
