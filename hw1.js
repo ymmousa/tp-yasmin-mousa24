@@ -169,10 +169,10 @@ function confirmPassword() {
     pwd2 = document.getElementById("cpwd").value;
 
     if (pwd1 != pwd2) {
-    document.getElementById("pwd-error").innerHTML = "Password does not match";
+    document.getElementById("cpwd-error").innerHTML = "Password does not match";
     return false;
     } else {
-    document.getElementById("pwd-error").innerHTML = "Passwords match";
+    document.getElementById("cpwd-error").innerHTML = "Passwords match";
     return true;
     }
 }
