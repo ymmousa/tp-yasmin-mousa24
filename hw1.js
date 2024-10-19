@@ -221,7 +221,7 @@ function validatePhone() {
     }
 
     const formattedPhone = 
-    phone.slice(0,3) + "=" + phone.slice(3,6) + "=" + phone.slice(6,10)
+    phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6,10)
     phoneInput.value = formattedPhone;
     document.getElementById("phone-error").innerHTML = "";
     return true;
@@ -237,13 +237,13 @@ function reviewInput() {
         if (formcontent.elements[i].value != "") {
             datatype = formcontent.elements[i].type;
             switch (datatype) {
-                case "checkbox";
+                case "checkbox":
                     if (formcontent.elements[i].checked) {
                         formoutput = formoutput + "<tr> <td align = 'right'>" + formcontent.elements[i].name + "</td>";
                         formoutput = formoutput + "<td class = 'outputdata'>&#x2713;</td></tr>";
                     }
                     break;
-                case "radio";
+                case "radio":
                     if (formcontent.elements[i].checked) {
                         formoutput = formoutput + "<tr> <td align = 'right'" + formcontent.elements[i].name + "</td>";
                         formoutput = "<td class = 'outputdata'>" + formcontent.elements[i].value + "</td></tr>";
