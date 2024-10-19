@@ -58,7 +58,7 @@
                         id="fname" 
                         maxlength="30"
                         size="30" 
-                        title="Letters, apostrophes, and dashes only"
+                        title="Letters, apostrophes, and dashes only."
                         pattern="[A-Z^a-z \-']{2,30}"
                         onblur="validateFname()"
                         required 
@@ -71,7 +71,7 @@
                         id="mname" 
                         maxlength="1"
                         size="1"
-                        title="Letters only, no numbers, and blank/null ok"
+                        title="Letters only and no numbers, or blank."
                         pattern="[a-zA-Z]{0,1}"
                         onblur="validateMname()"
                         />
@@ -88,7 +88,7 @@
                         id="lname"
                         maxlength="30"
                         size="30" 
-                        title="Letters, apostrophes, numbers 2-5 and dashes only"
+                        title="Letters, apostrophes, numbers 2-5 and dashes only."
                         pattern="[a-zA-Z 2-5]{2,}"
                         onblur="validateLname()"
                         required
@@ -105,7 +105,7 @@
                         id="birth" 
                         onblur="validateDob()"
                         required 
-                        title="Please enter your birth date"
+                        title="Please enter your birth date."
                         />
                      <br />
                    <span class="error" id="birth-error"></span>
@@ -151,7 +151,7 @@
                         id="ssn" 
                         onblur="validateSsn()"
                         required 
-                        title="Numbers only"
+                        title="Numbers only."
                          /> 
                  <span class="error" id="ssn-error"></span>
                     </td>
@@ -194,7 +194,7 @@
                         size="30"
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
                         required 
-                        title="Please enter your email address"
+                        title="Please enter your email address."
                         placeholder="name@domain.tld"
                         pattern="[a-z0-9._%+-]+@[a-z0-9._]+\.[a-z]{2,20}$"|
                         onblur="validateEmail()"
@@ -232,7 +232,7 @@
                         minlength="10"
                         maxlength="30"
                         required 
-                        title="Please confirm your password"
+                        title="Please confirm your password."
                         onblur="confirmCpwd()"
                         oninput="confirmCpwd()"
                         onfocus="confirmCpwd()"
@@ -258,7 +258,7 @@
                         id="addr1" 
                         maxlength="30"
                         required 
-                        title="Please enter your address"
+                        title="Please enter your address."
                         onblur="validateAddress1()"
                         placeholder="1234 Main St (req'd)"
                         />
@@ -274,7 +274,7 @@
                         name="addr2" 
                         id="addr2" 
                         maxlength="30"
-                        title="Please enter your address"
+                        title="Please enter your address."
                         placeholder="Apt #, etc..."                       
                        />
                     </td>
@@ -289,7 +289,7 @@
                         id="city" 
                         size="30"
                         required
-                        title="Please enter the city"                     
+                        title="Please enter the city."                     
                        />
                     </td>
                 </tr>
@@ -364,7 +364,7 @@
                         pattern="[0-9]{5}"
                         maxlength="5"
                         required
-                        title="Numbers only"
+                        title="Numbers only."
                         onblur="validateZip()"
                        />
             </br>
@@ -381,7 +381,7 @@
                         id="phone" 
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         maxlength="12"
-                        title="Please enter your phone number"    
+                        title="Please enter your phone number."    
                         placeholder="222-222-2222"   
                         onblur="validatePhone()"
                        />
@@ -476,7 +476,7 @@
                         maxlength="500"
                         id="notes"
                         name="notes"
-                        title="Please enter a brief explanation"
+                        title="Please enter a brief explanation."
                         placeholder="(Insert text here...)"              
                         ></textarea>
                         <span id="description_text"></span>
