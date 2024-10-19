@@ -136,3 +136,20 @@ textarea {
   font-weight: normal;
 }
 
+.error {
+    color: rgba(red);
+    font-size: 12px;
+    font-family: merriweather;
+     font-weight: normal;
+}
+
+.pwd-message {
+    text-align: right;
+    font-family: merriweather;
+    font-weight: normal;
+    position: relative;
+
+}
+    
+    
+
