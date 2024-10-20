@@ -165,15 +165,16 @@ function validatePassword() {
 
 /// Confirm Password validation ///
 function confirmPassword() {
-    pwd1 = document.getElementById("pwd").value;
-    pwd2 = document.getElementById("cpwd").value;
+    const pwd1 = document.getElementById("pwd").value;
+    const pwd2 = document.getElementById("cpwd").value;
 
-    if (pwd1 != pwd2) {
-    document.getElementById("cpwd-error").innerHTML = "Password does not match.";
-    return false;
+    const confirmError = document.getElementById("cpwd-error");
+    if (pwd1 !== pwd2) {
+        confirmError.innerHTML = "Passwords do not match.";
+        return false;
     } else {
-    document.getElementById("cpwd-error").innerHTML = "Passwords match.";
-    return true;
+        confirmError.innerHTML = "Passwords match.";
+        return true;
     }
 }
 
