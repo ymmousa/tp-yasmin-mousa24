@@ -201,7 +201,7 @@ function validateZip() {
     let zip = zipInput.value.replace(/[^\d-]/g,""); // removes non-number and non-dash characters
 
     if (!zip) {
-        document.getElementById("zip-error").innerHTML = "Zip code cannot be left blank.";
+        document.getElementById("zip-error").innerHTML = "Enter valid zip code.";
         return false;
     } 
     if (zip.length > 5) {
