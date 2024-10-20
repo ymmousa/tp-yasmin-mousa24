@@ -233,9 +233,9 @@
                         maxlength="30"
                         required 
                         title="Please confirm your password."
-                        onblur="confirmCpwd()"
-                        oninput="confirmCpwd()"
-                        onfocus="confirmCpwd()"
+                        onblur="confirmPassword()"
+                        oninput="confirmPassword()"
+                        onfocus="confirmPassword()"
                         />
                       <span class="error" id="cpwd-error"></span>
                     </td>
@@ -519,8 +519,8 @@
 
             </table>
         </div>
-     <tr>
-     <td colspan="3"><div class="pwd-message">
+     
+     <div class="pwd-message">
       <span id="msg1"></span> <br/>
       <span id="msg2"></span> <br/>
       <span id="msg3"></span> <br/>
@@ -530,8 +530,7 @@
       <span id="msg7"></span> <br/>
       <span id="cpwd-error"></span> <br/>
      </div>
-     </td>
-     </tr>
+   
      <center>
       <p id="showInput"></p>
       <div id="showInput"></div>
