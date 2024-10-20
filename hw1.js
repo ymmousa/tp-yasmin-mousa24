@@ -166,11 +166,11 @@ function validatePassword() {
 
 /// Confirm Password validation ///
 function confirmPassword() {
-    const pwd1 = document.getElementById("pwd").value;
-    const pwd2 = document.getElementById("cpwd").value;
+    const pwd = document.getElementById("pwd").value;
+    const cpwd = document.getElementById("cpwd").value;
 
     const confirmError = document.getElementById("cpwd-error");
-    if (pwd1 !== pwd2) {
+    if (pwd !== cpwd) {
         confirmError.innerHTML = "Passwords do not match.";
         return false;
     } else {
