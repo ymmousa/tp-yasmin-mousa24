@@ -159,7 +159,8 @@ function validatePassword() {
     //When there are no errors, display nothing // 
     const errorContainer = document.querySelector(".pwd-message");
     errorContainer.innerHTML = errorMessage
-    .map((message) => '<span>${message}</span><br/>')
+    errorContainer.innerHTML = errorMessage
+    .map((message) => `<span>${message}</span><br/>`)
     .join("");
     }
 
