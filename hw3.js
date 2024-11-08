@@ -44,7 +44,7 @@ function validateFname(){
     }
 }
 
-//middle name initial name validation js code//
+//middle name initial validation js code//
 function validateMname(){
     mname = document.getElementById("mname").value.trim();
     var namePattern = /^[A-Z]+$/;
