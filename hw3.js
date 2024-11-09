@@ -2,9 +2,9 @@
     File: hw3.js
     Name: Yasmin Mousa  
     Date Created: 2024-09-04
-    Date Updated: 2024-10-19
-    Version: 2.0
-    Purpose: MIS 3371 Homework 2 JS File
+    Date Updated: 2024-11-09
+    Version: 3.0
+    Purpose: MIS 3371 Homework 3 JS File
 */
 
 //this is the dynamic date js code//
