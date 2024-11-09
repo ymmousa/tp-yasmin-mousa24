@@ -63,6 +63,7 @@
                         onblur="validateFname()"
                         required 
                         />
+                     </br>
                      <span class="error" id="fname-error"></span>
                     <label for="mname">Middle Initial:</label>
                         <input 
@@ -75,6 +76,7 @@
                         pattern="[a-zA-Z]{0,1}"
                         onblur="validateMname()"
                         />
+                       </br>
                       <span class="error" id="mname-error"></span>
                     </td>
                     </td>
@@ -93,6 +95,7 @@
                         onblur="validateLname()"
                         required
                         />
+                      </br>
                       <span class="error" id="lname-error"></span>
                     </td>
                 </tr>
@@ -153,6 +156,7 @@
                         required 
                         title="Numbers only."
                          /> 
+                      </br>
                  <span class="error" id="ssn-error"></span>
                     </td>
                 </tr>
@@ -180,6 +184,7 @@
                         title="Userid must contain at most 20 characters. Cannot start with a number."
                         
                         />
+                      </br>
                     <span class="error" id="uid-error"></span>
                     </td>
                 </tr>
@@ -199,6 +204,7 @@
                         pattern="[a-z0-9._%+-]+@[a-z0-9._]+\.[a-z]{2,20}$"|
                         onblur="validateEmail()"
                         />
+                      </br>
                      <span class="error" id="email-error"></span>
                     </td>
                 </tr>
@@ -218,6 +224,7 @@
                         oninput="validatePassword()"
                         onfocus="validatePassword()"
                         />
+                      </br>
                       <span class="error" id="pwd-error"></span>
                     </td>
                 </tr>
@@ -237,6 +244,7 @@
                         oninput="confirmPassword()"
                         onfocus="confirmPassword()"
                         />
+                      </br>
                       <span class="error" id="cpwd-error"></span>
                     </td>
                 </tr>
@@ -262,6 +270,7 @@
                         onblur="validateAddress1()"
                         placeholder="1234 Main St (req'd)"
                         />
+                      </br>
                      <span class="error" id="addr1-error"></span>
                     </td>
                 </tr>
@@ -292,6 +301,7 @@
                         title="Please enter the city."  
                         onblur="validateCity()"
                        />
+                      </br>
                      <span class="error" id="city-error"></span>
                     </td>
                 </tr>
@@ -369,7 +379,7 @@
                         title="Numbers only."
                         onblur="validateZip()"
                        />
-            </br>
+                      </br>
                       <span class="error" id="zip-error"></span>
                     </td>
                 </tr>
@@ -387,7 +397,7 @@
                         placeholder="222-222-2222"   
                         onblur="validatePhone()"
                        />
-                     <br/>
+                     </br>
                 <span class="error" id="phone-error"></span>
                     </td>
                 </tr>
