@@ -29,7 +29,8 @@ function validateFname(){
     if (fname == "") {
         document.getElementById("fname-error").innerHTML = "First name field cannot be empty.";
         return false;
-    } else if (!fname.match(namePattern)) { //checks if first name matches pattern
+    } else if (fname != "") {
+          if (!fname.match(namePattern)) { //checks if first name matches pattern
         document.getElementById("fname-error").innerHTML = "Letters, apostrophes, and dashes only.";
         return false;
     } else if (fname.length < 2) { //checks if name is at least 1 character
@@ -42,6 +43,7 @@ function validateFname(){
         document.getElementById("fname-error").innerHTML = "";
         return true;
     }
+}
 }
 
 //middle name initial validation js code//
@@ -74,7 +76,8 @@ function validateLname(){
     if (lname == "") {
         document.getElementById("lname-error").innerHTML = "Last name field cannot be empty.";
         return false;
-    } else if (!lname.match(namePattern)) { //checks if last name matches pattern
+    } else if (lname != "") {
+        if (!lname.match(namePattern)) { //checks if last name matches pattern
         document.getElementById("lname-error").innerHTML = "Letters, apostrophes, and dashes only.";
         return false;
     } else if (lname.length < 2) { //checks if name is at least 1 character
@@ -87,6 +90,7 @@ function validateLname(){
         document.getElementById("lname-error").innerHTML = "";
         return true;
     }
+}
 }
 
 // DOB //
