@@ -262,6 +262,16 @@ function validateAddress1() {
     }
 }
 
+// City validation code //
+function validateCity() {
+    city = document.getElementById("city").value.trim();
+
+    if(!city) {
+       document.getElementById("city-error").innerHTML = "City cannot be left blank.";
+        return false;
+    } else {
+        document.getElementById("city-error").innerHTML = "";
+        return true;
 
 // Zipcode validation code // 
 function validateZip() {
