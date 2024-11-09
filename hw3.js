@@ -272,6 +272,8 @@ function validateCity() {
     } else {
         document.getElementById("city-error").innerHTML = "";
         return true;
+    }
+}
 
 // Zipcode validation code // 
 function validateZip() {
