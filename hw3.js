@@ -48,21 +48,18 @@ function validateFname(){
 
 //middle name initial validation js code//
 function validateMname(){
-    mname = document.getElementById("mname").value.trim();
-    var namePattern = /^[A-Z]+$/;
+    let mname = document.getElementById("mname").value;
+    const namePattern = /^[A-Z]+$/;
 
     //makes middle initial uppercase
     mname = mname.toUpperCase();
     document.getElementById("mname").value = mname;
     
     //checks if middle initial is one character//
-  if (mname.length > 1) {
-      document.getElementById("mname-error").innerHTML = "Middle initial cannot have more than one character.";
+  if (!mname.match (namePattern)) {
+      document.getElementById("mname-error").innerHTML = "Middle initial must be one single uppercase letter.";
       return false;
-    } else if (!mname.match(namePattern)) { //checks if middle initial matches pattern
-        document.getElementById("mname-error").innerHTML = "Letters only.";
-        return false;
-     } else {
+    } else {
         document.getElementById("mname-error").innerHTML = "";
         return true;
     }
