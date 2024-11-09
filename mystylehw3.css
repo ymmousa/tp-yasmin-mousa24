@@ -191,7 +191,7 @@ td.output {
 }
 
 #alert-content {
-    background-color: rgb(white);
+    background-color: rgb(250, 250, 250);
     border-radius: 10px;
     width: 300px;
     height: 135px;
@@ -209,7 +209,7 @@ td.output {
 }
 
 #close-alert {
-    background-color: rgb(white);
+    background-color: rgb(250, 250, 250);
     border-width: 1px;
     border-style: solid;
     color: rgb(188, 34, 185);
