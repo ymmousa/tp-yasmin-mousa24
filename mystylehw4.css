@@ -226,6 +226,26 @@ td.output {
     text-align: center;
     font-family: merriweather;
 }
+
+/*iframe styling*/
+.iframe-container {
+    position: absolute;
+    top: 15%;
+    right: 15px;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.iframe-container {
+    width: 95%;
+    height: 20%;
+    border: 1px solid rgba(11, 4, 0, 0.951);
+}
+
+
+    
     
 
     
