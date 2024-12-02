@@ -1,10 +1,10 @@
 /*
-    File: hw3.js
+    File: hw4.js
     Name: Yasmin Mousa  
     Date Created: 2024-09-04
-    Date Updated: 2024-11-09
-    Version: 3.0
-    Purpose: MIS 3371 Homework 3 JS File
+    Date Updated: 2024-12-04
+    Version: 4.0
+    Purpose: MIS 3371 Homework 4 JS File
 */
 
 //this is the dynamic date js code//
