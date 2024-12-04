@@ -7,9 +7,19 @@
     Purpose: MIS 3371 Homework 4 CSS File
 */
 header {
-  width: 100%;
- background-color: rgba(242, 8, 141, 0.501);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(242, 8, 141, 0.501);
+    transition: background-color 0.4 easy-in-out;
+    z-index: 1000;
 }
+
+header.scrolled {
+    background-color: rgba(242, 8, 141, 0.501);
+    opacity: 1.0;
+}
+
 
 body {
   display: flex;
@@ -230,7 +240,7 @@ td.output {
 /*iframe styling*/
 .iframe-container {
     position: absolute;
-    top: 15%;
+    top: 25%;
     right: 15px;
     width: 25%;
     height: 100%;
@@ -240,7 +250,7 @@ td.output {
 
 .iframe-container {
     width: 95%;
-    height: 15%;
+    height: 20%;
     border: 1px solid rgba(11, 4, 0, 0.951);
 }
 
