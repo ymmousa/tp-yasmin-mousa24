@@ -248,7 +248,7 @@ td.output {
     box-sizing: border-box;
 }
 
-.iframe-container {
+.iframe-container iframe {
     width: 95%;
     height: 20%;
     border: 1px solid rgba(11, 4, 0, 0.951);
