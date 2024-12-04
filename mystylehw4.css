@@ -239,7 +239,7 @@ td.output {
 
 /*iframe styling*/
 .iframe-container {
-    position: absolute;
+    position: right;
     top: 25%;
     right: 15px;
     width: 25%;
