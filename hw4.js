@@ -414,6 +414,77 @@ function validateInfo() {
         showAlert();
     }
 }
+
+//cookie for automatic info input on form//
+function setCookie (name, cvalue, expiryDays) {
+    var day = new Date();
+    day.setTime(day.getTime() + (expiryDays*24*60*60*1000));
+    var expires = "expires" + day.toUTCString();
+    document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie {
+    var cookieName = name + "=";
+    var cookies = document.cookie.split(';');
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        while (cookie.charAt (0) == ' ' {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(cookieName) == 0 {
+            return cookie.substring(cookieName.length, cookie.length);
+        }
+    }
+    return " ";
+}
+
+var inputs = [
+    {id: "fname", cookieName: "firstName"},
+    {id: "mname", cookieName: "middleInitial"},
+    {id: "lname", cookieName: "lastName"},
+    {id: "birth", cookieName: "dob"},
+    {id: "ssn", cookieName: "ssn"},
+    {id: "uid", cookieName: "userID"},
+    {id: "email", cookieName: "email"},
+    {id: "addr1", cookieName: "address1"},
+    {id: "city", cookieName: "city"},
+    {id: "zip", cookieName: "zipCode"},
+    {id: "phone", cookieName: "phone"},
+]
+
+inputs.forEach(function(input)) {
+    var inputElement = document.getElementbyId(input.id);
+
+    //prefill input fields with value from the cookie
+    var cookieValue = getCookie(input.cookieName);
+    if (cookieValue !==" ") {
+        inputElement.value = cookieValue;
+    }
+
+    //set a cookie with the input value when the input field changes
+    inputElement.addEventListener("input", function(){
+        setCookie(input.cookieName, inputElement.value, 30);
+    });
+
+    //welcome user with name + message when cookie is set
+    var firstName = getCookie("firstName");
+    if (firstName !== " ") {
+        document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!" </br>";
+        document.getElementById("welcome2").innerHTML = 
+            "<a href= '#' id='new-user'> Not " + firstName + "? Click here to start a new form. </a>";
+         document.getElementById("new-user").addEventListener = ("click", function() {
+             inputs.forEach(function(input) {
+                 setCookie(input.cookieName, "", -1);
+             })
+             location.reload();
+         })
+    }
+    
+        
+            
+    
+
     
 
                         
