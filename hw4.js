@@ -423,16 +423,16 @@ function setCookie (name, cvalue, expiryDays) {
     document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function getCookie {
+function getCookie (name) {
     var cookieName = name + "=";
     var cookies = document.cookie.split(';');
 
     for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
-        while (cookie.charAt (0) == ' ' {
+        while (cookie.charAt (0) == ' ' } {
             cookie = cookie.substring(1);
         }
-        if (cookie.indexOf(cookieName) == 0 {
+        if (cookie.indexOf(cookieName) == 0) {
             return cookie.substring(cookieName.length, cookie.length);
         }
     }
