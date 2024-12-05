@@ -419,8 +419,9 @@ function validateInfo() {
 function setCookie (name, cvalue, expiryDays) {
     var day = new Date();
     day.setTime(day.getTime() + (expiryDays*24*60*60*1000));
-    var expires = "expires" + day.toUTCString();
+    var expires = "expires=" + day.toUTCString();
     document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+    console.log("Cookie set:", name, cvalue);
 }
 
 function getCookie (name) {
@@ -450,7 +451,7 @@ var inputs = [
     {id: "addr1", cookieName: "address1"},
     {id: "city", cookieName: "city"},
     {id: "zip", cookieName: "zipCode"},
-    {id: "phone", cookieName: "phone"},
+    {id: "phone", cookieName: "phone"}
 ]
 
 inputs.forEach(function(input)) {
