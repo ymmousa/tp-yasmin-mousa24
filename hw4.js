@@ -459,7 +459,7 @@ inputs.forEach(function(input)) {
 
     //prefill input fields with value from the cookie
     var cookieValue = getCookie(input.cookieName);
-    if (cookieValue !==" ") {
+    if (cookieValue !=="") {
         inputElement.value = cookieValue;
     }
 
@@ -477,9 +477,9 @@ inputs.forEach(function(input)) {
          document.getElementById("new-user").addEventListener = ("click", function() {
              inputs.forEach(function(input) {
                  setCookie(input.cookieName, "", -1);
-             })
+             });
              location.reload();
-         })
+         });
     }
     
             
