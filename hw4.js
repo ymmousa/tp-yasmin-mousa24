@@ -413,7 +413,9 @@ function validateInfo() {
     } else {
         showAlert();
     }
-}        
+} 
+
+
     
 
     
