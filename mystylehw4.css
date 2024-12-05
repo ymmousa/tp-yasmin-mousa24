@@ -246,6 +246,7 @@ td.output {
     height: 100%;
     overflow: hidden;
     box-sizing: border-box;
+    z-index: 1000;
 }
 
 .iframe-container iframe {
