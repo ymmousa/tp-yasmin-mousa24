@@ -468,15 +468,11 @@ inputs.forEach(function(input)) {
         setCookie(input.cookieName, inputElement.value, 30);
     });
 
-    //welcome user with name + message when cookie is set
-    window.onload = function() {
+   //welcome user with name + message when cookie is set
     var firstName = getCookie("firstName");
-    var storedDate = getCookie("currentDate");
-    var welcome1 = document.getElementById("welcome1");
-    var welcome2 = document.getElementById("welcome2");
     if (firstName !== " ") {
-        welcome1.innerHTML = "Welcome back, " + firstName + "!" </br>";
-        welcome2.innerHTML = 
+        document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!" </br>";
+        document.getElementById("welcome2").innerHTML = 
             "<a href= '#' id='new-user'> Not " + firstName + "? Click here to start a new form. </a>";
          document.getElementById("new-user").addEventListener = ("click", function() {
              inputs.forEach(function(input) {
@@ -485,14 +481,7 @@ inputs.forEach(function(input)) {
              location.reload();
          })
     }
-        if (storedDate) {
-        document.getElementById("today").innerText = "Today's date: " + storedDate;
-    } else {
-        setDateCookie();
-    }
-    };
     
-        
             
     
 
